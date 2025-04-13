@@ -6,6 +6,13 @@ if ! command -v python3 &> /dev/null; then
     exit 1
 fi
 
+# create a virtual environment
+if [ ! -d "venv" ]; then
+    echo "Creating a virtual environment..."
+    python3 -m venv .venv
+fi
+source .venv/bin/activate
+
 # Check if pip is installed
 if ! command -v pip3 &> /dev/null; then
     echo "pip3 is not installed. Installing pip..."
