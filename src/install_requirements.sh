@@ -11,6 +11,7 @@ if [ ! -d "venv" ]; then
     echo "Creating a virtual environment..."
     python3 -m venv .venv
 fi
+
 source .venv/bin/activate
 
 # Check if pip is installed
